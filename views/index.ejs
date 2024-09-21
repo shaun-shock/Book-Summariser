@@ -1,0 +1,123 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Book Summariser</title>
+    <link href="/styles/style.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+
+    <!-- Background -->
+    <div class="bg"></div>
+
+    <main class="form-signin" id="form-container">
+        <h1 class="h3">Book Summariser</h1>
+
+        <form action="/summary" method="POST">
+            <div class="form-floating" style="padding: 0px 0px 10px 0px">
+                <input type="text" class="form-control" id="bName" name="bName" required>
+                <label for="bName">Book Name</label>
+            </div>
+            <div class="form-floating" style="padding: 0px 0px 10px 0px">
+                <input type="text" class="form-control" id="bChap" name="bChap" required>
+                <label for="bChap">Book Chapter</label>
+            </div>
+            <div class="form-floating" style="padding: 0px 0px 10px 0px">
+                <input type="text" class="form-control" id="bSpecific" name="bSpecific"required>
+                <label for="bSpecific">Specifics</label>
+            </div>
+
+            <button class="w-100 btn btn-lg" type="submit" onclick="showLoadingScreen()">Generate Summary</button>
+        </form>
+
+        <p class="copyright">© SDTech 2024</p>
+    </main>
+
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loading-screen" style="display: none;">
+        <div class="spinner"></div>
+        <p>Generating Summary...</p>
+    </div>
+
+    <script>
+        function showLoadingScreen() {
+            // Hide the form and show the loading screen
+
+
+        const defaultValues = {
+            bName: "Garbage values",
+            bChap: "All chapters",
+            bSpecific: "General Summary"
+        };
+
+        // Check each field and set default values if empty
+        for (const key in defaultValues) {
+            const input = document.getElementById(key);
+            if (!input.value.trim()) {
+                input.value = defaultValues[key];
+            }
+        }
+
+        // Hide the form and show the loading screen
+        document.getElementById("form-container").style.display = "none";
+        document.getElementById("loading-screen").style.display = "flex";
+        }
+    </script>
+
+    <style>
+        /* Background Styling */
+        .bg {
+            position: absolute;
+            z-index: -1;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background-image: radial-gradient(circle at 30% 86%, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.03) 8%, transparent 8%, transparent 92%), 
+                             radial-gradient(circle at 55% 100%, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.03) 8%, transparent 8%, transparent 92%), 
+                             radial-gradient(circle at 40% 75%, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.03) 6%, transparent 6%, transparent 94%), 
+                             linear-gradient(135deg, #17e9ad, #1d18d0);
+        }
+
+        /* Loading Screen Styling */
+        .loading-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.5rem;
+            z-index: 9999;
+            flex-direction: column;
+        }
+
+        /* Rotating Spinner Styling */
+        .spinner {
+            width: 100px;
+            height: 100px;
+            border: 10px solid rgba(255, 255, 255, 0.1);
+            border-top: 10px solid #ffffff;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin-bottom: 20px;
+        }
+
+        /* Spinner Animation */
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</body>
+</html>
