@@ -34,7 +34,7 @@ The app integrates with the **Gemini 1.5 turbo API**, which is known for providi
 
 4. Start the application:
    ```bash
-   npm start
+   node index.js
    ```
 
 
