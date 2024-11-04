@@ -1,28 +1,28 @@
-# Book Summariser
+# SamuraiZe 🥷🏻
 
-The **Book Summariser** app is designed to provide quick and efficient summaries of any book. It allows users to input the title or key information about a book, and returns a concise, well-structured summary.
+**SamuraiZe** is your quick and precise book summarizer, embodying the efficiency of a samurai and the stealth of a ninja. Just enter the title or key details of a book, and **SamuraiZe** will swiftly return a concise, well-structured summary, cutting through the clutter to deliver the essence.
 
 ## Features
-- **Fast Summaries**: Using the **Gemini 1.5 turbo API**, the app provides summaries in a matter of seconds, optimized for speed and accuracy.
-- **User-Friendly Interface**: The app features a clean and intuitive interface with dynamic content rendering using **EJS** and responsive design powered by **CSS** and **Bootstrap**.
-- **Seamless Integration**: The backend, built with **NodeJS**, efficiently handles API requests and manages server-side logic.
+- **Swift Summaries**: Powered by the **Gemini 1.5 turbo API**, SamuraiZe delivers summaries with ninja-like speed and precision, optimized for quality and accuracy.
+- **Intuitive Interface**: With a clean, user-friendly interface, SamuraiZe features dynamic content rendering using **EJS** and a responsive design crafted with **CSS** and **Bootstrap**.
+- **Seamless Backend Integration**: Built on **NodeJS**, SamuraiZe's backend deftly handles API requests and server-side logic, ensuring a smooth and fast experience.
 
 ## Tech Stack
 - **Frontend**:
-  - **EJS (Embedded JavaScript)**: Used for dynamic rendering of templates and content.
-  - **CSS & Bootstrap**: Used to style the app and ensure it is fully responsive on any device.
-  - **JavaScript**: Used for client-side logic and dynamic interactions.
+  - **EJS (Embedded JavaScript)**: Provides dynamic rendering of templates and content.
+  - **CSS & Bootstrap**: Ensures SamuraiZe is fully responsive, adapting smoothly to any device.
+  - **JavaScript**: Manages client-side logic and interactive features.
   
 - **Backend**:
-  - **NodeJS**: Powers the backend, handling API requests and response logic.
+  - **NodeJS**: SamuraiZe’s core, handling API requests and backend processing.
 
 ## API Integration
-The app integrates with the **Gemini 1.5 turbo API**, which is known for providing fast yet efficient results. This API helps process and summarize large amounts of text quickly, delivering high-quality summaries.
+SamuraiZe integrates with the **Gemini 1.5 turbo API**, giving it the agility to process and summarize large amounts of text efficiently, just like a well-trained ninja.
 
-## How to Run
+## How to Deploy SamuraiZe
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/book-summariser.git
+   git clone https://github.com/your-username/samuraize.git
    ```
 2. Install dependencies:
    ```bash
@@ -37,18 +37,12 @@ The app integrates with the **Gemini 1.5 turbo API**, which is known for providi
    node index.js
    ```
 
+## Future Enhancements
+- Multi-language support for global reach
+- User accounts with history tracking
+- Options to bookmark and download summaries
 
-## Future Improvements
-- Additional language support
-- User accounts and history tracking
-- Bookmark and download summary options
+## Experience SamuraiZe Online
+Unleash the power of SamuraiZe on Render. Please be aware that the app might take a moment to load as it’s currently deployed with minimal server resources.
 
-
-## Feel free to use the app deployed on Render
-Please note that it requires some time to load as the app is in its initial phase, hence has been deployed with minimum CPU memory on server side.
-https://book-summariser.onrender.com/summary
-
-
----
-
-Feel free to modify or expand on this based on your specific needs!
+https://book-summariser.onrender.com/
